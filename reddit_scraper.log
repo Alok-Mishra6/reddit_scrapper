@@ -1,0 +1,182 @@
+2026-02-03 04:27:31,589 - WARNING - Proxy file not found: reddit_proxies.json
+2026-02-03 04:27:31,589 - INFO - ✓ Scraper initialized
+2026-02-03 04:27:31,589 - INFO -   - Proxies: Disabled
+2026-02-03 04:27:31,589 - INFO -   - Workers: 4
+2026-02-03 04:27:31,589 - INFO -   - Rate limit: 20000 req/hour
+2026-02-03 04:27:31,589 - INFO - 
+============================================================
+2026-02-03 04:27:31,589 - INFO - EXAMPLE 1: Single Subreddit
+2026-02-03 04:27:31,589 - INFO - ============================================================
+2026-02-03 04:27:31,589 - INFO - 🎯 Scraping r/python (hot) - Target: 100 posts
+2026-02-03 04:27:36,187 - INFO -   Progress: 100/100 posts
+2026-02-03 04:27:36,187 - INFO - ✓ Scraped 100 posts from r/python
+2026-02-03 04:27:36,190 - INFO - ✓ Saved to reddit_data/python_hot_posts.json
+2026-02-03 04:27:36,190 - INFO - 
+============================================================
+2026-02-03 04:27:36,190 - INFO - EXAMPLE 2: Multiple Subreddits (Parallel)
+2026-02-03 04:27:36,190 - INFO - ============================================================
+2026-02-03 04:27:36,190 - INFO - 🎯 Scraping 5 subreddits (50 posts each)
+2026-02-03 04:27:36,190 - INFO - 🎯 Scraping r/python (hot) - Target: 50 posts
+2026-02-03 04:27:36,190 - INFO - 🎯 Scraping r/javascript (hot) - Target: 50 posts
+2026-02-03 04:27:36,190 - INFO - 🎯 Scraping r/golang (hot) - Target: 50 posts
+2026-02-03 04:27:36,191 - INFO - 🎯 Scraping r/rust (hot) - Target: 50 posts
+2026-02-03 04:27:38,755 - INFO -   Progress: 50/50 posts
+2026-02-03 04:27:38,755 - INFO - ✓ Scraped 50 posts from r/javascript
+2026-02-03 04:27:38,756 - INFO - 🎯 Scraping r/webdev (hot) - Target: 50 posts
+2026-02-03 04:27:38,756 - INFO -   ✓ r/javascript: 50 posts
+2026-02-03 04:27:39,944 - INFO -   Progress: 50/50 posts
+2026-02-03 04:27:39,945 - INFO - ✓ Scraped 50 posts from r/rust
+2026-02-03 04:27:39,945 - INFO -   ✓ r/rust: 50 posts
+2026-02-03 04:27:39,972 - INFO -   Progress: 50/50 posts
+2026-02-03 04:27:39,972 - INFO - ✓ Scraped 50 posts from r/python
+2026-02-03 04:27:39,972 - INFO -   ✓ r/python: 50 posts
+2026-02-03 04:27:40,181 - INFO -   Progress: 50/50 posts
+2026-02-03 04:27:40,182 - INFO - ✓ Scraped 50 posts from r/golang
+2026-02-03 04:27:40,182 - INFO -   ✓ r/golang: 50 posts
+2026-02-03 04:27:42,359 - INFO -   Progress: 50/50 posts
+2026-02-03 04:27:42,359 - INFO - ✓ Scraped 50 posts from r/webdev
+2026-02-03 04:27:42,360 - INFO -   ✓ r/webdev: 50 posts
+2026-02-03 04:27:42,360 - INFO - ✓ Total posts scraped: 250
+2026-02-03 04:27:42,373 - INFO - ✓ Saved to reddit_data/multiple_subreddits.json
+2026-02-03 04:27:42,373 - INFO - 
+============================================================
+2026-02-03 04:27:42,373 - INFO - EXAMPLE 3: Post Comments
+2026-02-03 04:27:42,373 - INFO - ============================================================
+2026-02-03 04:27:42,373 - INFO - Scraping comments from: Sunday Daily Thread: What's everyone working on this week?...
+2026-02-03 04:27:44,513 - ERROR - 
+✗ Fatal error: 'list' object has no attribute 'get'
+Traceback (most recent call last):
+  File "/home/alok/codes/reddit_scrapping/main.py", line 888, in main
+    comments_data = scraper.scrape_post_comments(
+        post_url=top_post['permalink'],
+        max_comments=100
+    )
+  File "/home/alok/codes/reddit_scrapping/main.py", line 679, in scrape_post_comments
+    data = self._make_request(json_url, params)
+  File "/home/alok/codes/reddit_scrapping/main.py", line 531, in _make_request
+    posts_count=len(data.get('data', {}).get('children', []))
+                    ^^^^^^^^
+AttributeError: 'list' object has no attribute 'get'
+2026-02-03 04:32:26,667 - WARNING - Proxy file not found: reddit_proxies.json
+2026-02-03 04:32:26,667 - INFO - ✓ Scraper initialized
+2026-02-03 04:32:26,667 - INFO -   - Proxies: Disabled
+2026-02-03 04:32:26,667 - INFO -   - Workers: 4
+2026-02-03 04:32:26,667 - INFO -   - Rate limit: 20000 req/hour
+2026-02-03 04:32:26,667 - INFO - 
+============================================================
+2026-02-03 04:32:26,667 - INFO - EXAMPLE 1: Single Subreddit
+2026-02-03 04:32:26,667 - INFO - ============================================================
+2026-02-03 04:32:26,667 - INFO - 🎯 Scraping r/python (hot) - Target: 100 posts
+2026-02-03 04:32:30,804 - INFO -   Progress: 100/100 posts
+2026-02-03 04:32:30,805 - INFO - ✓ Scraped 100 posts from r/python
+2026-02-03 04:32:30,812 - INFO - ✓ Saved to reddit_data/python_hot_posts.json
+2026-02-03 04:32:30,812 - INFO - 
+============================================================
+2026-02-03 04:32:30,812 - INFO - EXAMPLE 2: Multiple Subreddits (Parallel)
+2026-02-03 04:32:30,812 - INFO - ============================================================
+2026-02-03 04:32:30,812 - INFO - 🎯 Scraping 5 subreddits (50 posts each)
+2026-02-03 04:32:30,812 - INFO - 🎯 Scraping r/python (hot) - Target: 50 posts
+2026-02-03 04:32:30,812 - INFO - 🎯 Scraping r/javascript (hot) - Target: 50 posts
+2026-02-03 04:32:30,813 - INFO - 🎯 Scraping r/golang (hot) - Target: 50 posts
+2026-02-03 04:32:30,813 - INFO - 🎯 Scraping r/rust (hot) - Target: 50 posts
+2026-02-03 04:32:33,739 - INFO -   Progress: 50/50 posts
+2026-02-03 04:32:33,739 - INFO - ✓ Scraped 50 posts from r/javascript
+2026-02-03 04:32:33,739 - INFO - 🎯 Scraping r/webdev (hot) - Target: 50 posts
+2026-02-03 04:32:33,739 - INFO -   ✓ r/javascript: 50 posts
+2026-02-03 04:32:34,739 - INFO -   Progress: 50/50 posts
+2026-02-03 04:32:34,739 - INFO - ✓ Scraped 50 posts from r/python
+2026-02-03 04:32:34,740 - INFO -   ✓ r/python: 50 posts
+2026-02-03 04:32:34,759 - INFO -   Progress: 50/50 posts
+2026-02-03 04:32:34,759 - INFO - ✓ Scraped 50 posts from r/golang
+2026-02-03 04:32:34,760 - INFO -   ✓ r/golang: 50 posts
+2026-02-03 04:32:35,195 - INFO -   Progress: 50/50 posts
+2026-02-03 04:32:35,195 - INFO - ✓ Scraped 50 posts from r/rust
+2026-02-03 04:32:35,196 - INFO -   ✓ r/rust: 50 posts
+2026-02-03 04:32:37,852 - INFO -   Progress: 50/50 posts
+2026-02-03 04:32:37,852 - INFO - ✓ Scraped 50 posts from r/webdev
+2026-02-03 04:32:37,853 - INFO -   ✓ r/webdev: 50 posts
+2026-02-03 04:32:37,854 - INFO - ✓ Total posts scraped: 250
+2026-02-03 04:32:37,868 - INFO - ✓ Saved to reddit_data/multiple_subreddits.json
+2026-02-03 04:32:37,868 - INFO - 
+============================================================
+2026-02-03 04:32:37,868 - INFO - EXAMPLE 3: Post Comments
+2026-02-03 04:32:37,868 - INFO - ============================================================
+2026-02-03 04:32:37,868 - INFO - Scraping comments from: Sunday Daily Thread: What's everyone working on this week?...
+2026-02-03 04:32:39,676 - INFO - ✓ Saved to reddit_data/post_comments.json
+2026-02-03 04:32:39,676 - INFO - 
+✓ Scraping completed successfully!
+2026-02-03 04:37:33,549 - INFO - ✓ Loaded 56 proxies
+2026-02-03 04:37:33,549 - INFO - ✓ Scraper initialized
+2026-02-03 04:37:33,549 - INFO -   - Proxies: Enabled (56)
+2026-02-03 04:37:33,549 - INFO -   - Workers: 4
+2026-02-03 04:37:33,549 - INFO -   - Rate limit: 20000 req/hour
+2026-02-03 04:37:33,549 - INFO - 
+============================================================
+2026-02-03 04:37:33,549 - INFO - EXAMPLE 1: Single Subreddit
+2026-02-03 04:37:33,549 - INFO - ============================================================
+2026-02-03 04:37:33,549 - INFO - 🎯 Scraping r/python (hot) - Target: 100 posts
+2026-02-03 04:37:50,118 - WARNING - ⚠️  Request error: HTTPSConnectionPool(host='www.reddit.com', port=443): Max retries exceeded with url: /r/python/hot.j
+2026-02-03 04:38:11,191 - WARNING - ⚠️  Request error: HTTPSConnectionPool(host='www.reddit.com', port=443): Max retries exceeded with url: /r/python/hot.j
+2026-02-03 04:38:26,635 - INFO -   Progress: 100/100 posts
+2026-02-03 04:38:26,636 - WARNING - ⚠️  Health low (52/100), auto-throttling...
+2026-02-03 04:38:26,636 - INFO - ✓ Scraped 100 posts from r/python
+2026-02-03 04:38:26,639 - INFO - ✓ Saved to reddit_data/python_hot_posts.json
+2026-02-03 04:38:26,639 - INFO - 
+============================================================
+2026-02-03 04:38:26,639 - INFO - EXAMPLE 2: Multiple Subreddits (Parallel)
+2026-02-03 04:38:26,639 - INFO - ============================================================
+2026-02-03 04:38:26,639 - INFO - 🎯 Scraping 5 subreddits (50 posts each)
+2026-02-03 04:38:26,639 - INFO - 🎯 Scraping r/python (hot) - Target: 50 posts
+2026-02-03 04:38:26,639 - INFO - 🎯 Scraping r/javascript (hot) - Target: 50 posts
+2026-02-03 04:38:26,639 - INFO - 🎯 Scraping r/golang (hot) - Target: 50 posts
+2026-02-03 04:38:26,640 - INFO - 🎯 Scraping r/rust (hot) - Target: 50 posts
+2026-02-03 04:38:34,581 - INFO -   Progress: 50/50 posts
+2026-02-03 04:38:34,582 - WARNING - ⚠️  Health low (62/100), auto-throttling...
+2026-02-03 04:38:34,582 - INFO - ✓ Scraped 50 posts from r/rust
+2026-02-03 04:38:34,582 - INFO - 🎯 Scraping r/webdev (hot) - Target: 50 posts
+2026-02-03 04:38:34,582 - INFO -   ✓ r/rust: 50 posts
+2026-02-03 04:38:38,928 - INFO -   Progress: 50/50 posts
+2026-02-03 04:38:38,928 - WARNING - ⚠️  Health low (68/100), auto-throttling...
+2026-02-03 04:38:38,928 - INFO - ✓ Scraped 50 posts from r/python
+2026-02-03 04:38:38,929 - INFO -   ✓ r/python: 50 posts
+2026-02-03 04:38:44,139 - WARNING - ⚠️  Request error: HTTPSConnectionPool(host='www.reddit.com', port=443): Max retries exceeded with url: /r/golang/hot.j
+2026-02-03 04:38:44,665 - WARNING - ⚠️  Request error: HTTPSConnectionPool(host='www.reddit.com', port=443): Max retries exceeded with url: /r/javascript/h
+2026-02-03 04:38:47,628 - INFO -   Progress: 50/50 posts
+2026-02-03 04:38:47,629 - WARNING - ⚠️  Health low (62/100), auto-throttling...
+2026-02-03 04:38:47,629 - INFO - ✓ Scraped 50 posts from r/webdev
+2026-02-03 04:38:47,629 - INFO -   ✓ r/webdev: 50 posts
+2026-02-03 04:39:09,590 - WARNING - ⚠️  Request error: HTTPSConnectionPool(host='www.reddit.com', port=443): Max retries exceeded with url: /r/golang/hot.j
+2026-02-03 04:39:12,560 - WARNING - ⚠️  Request error: HTTPSConnectionPool(host='www.reddit.com', port=443): Max retries exceeded with url: /r/javascript/h
+2026-02-03 04:39:37,047 - INFO -   Progress: 50/50 posts
+2026-02-03 04:39:37,047 - WARNING - ⚠️  Health low (59/100), auto-throttling...
+2026-02-03 04:39:37,047 - INFO - ✓ Scraped 50 posts from r/golang
+2026-02-03 04:39:37,048 - INFO -   ✓ r/golang: 50 posts
+2026-02-03 04:39:44,195 - WARNING - ⚠️  Request error: HTTPSConnectionPool(host='www.reddit.com', port=443): Max retries exceeded with url: /r/javascript/h
+2026-02-03 04:39:44,195 - WARNING - Failed to fetch data, stopping
+2026-02-03 04:39:44,195 - INFO - ✓ Scraped 0 posts from r/javascript
+2026-02-03 04:39:44,195 - INFO -   ✓ r/javascript: 0 posts
+2026-02-03 04:39:44,196 - INFO - ✓ Total posts scraped: 200
+2026-02-03 04:39:44,204 - INFO - ✓ Saved to reddit_data/multiple_subreddits.json
+2026-02-03 04:39:44,204 - INFO - 
+============================================================
+2026-02-03 04:39:44,204 - INFO - EXAMPLE 3: Post Comments
+2026-02-03 04:39:44,204 - INFO - ============================================================
+2026-02-03 04:39:44,204 - INFO - Scraping comments from: Sunday Daily Thread: What's everyone working on this week?...
+2026-02-03 04:40:07,285 - WARNING - ⚠️  Request error: HTTPSConnectionPool(host='www.reddit.com', port=443): Max retries exceeded with url: /r/Python/comme
+2026-02-03 04:40:40,608 - WARNING - ⚠️  Request error: HTTPSConnectionPool(host='www.reddit.com', port=443): Max retries exceeded with url: /r/Python/comme
+2026-02-03 04:41:14,130 - WARNING - ⚠️  Request error: HTTPSConnectionPool(host='www.reddit.com', port=443): Max retries exceeded with url: /r/Python/comme
+2026-02-03 04:41:14,131 - INFO - ✓ Saved to reddit_data/post_comments.json
+2026-02-03 04:41:14,131 - INFO - 
+✓ Scraping completed successfully!
+2026-03-16 00:02:36,085 - INFO - ✓ Loaded 56 proxies
+2026-03-16 00:02:36,086 - INFO - ✓ Scraper initialized
+2026-03-16 00:02:36,086 - INFO -   - Proxies: Enabled (56)
+2026-03-16 00:02:36,086 - INFO -   - Workers: 4
+2026-03-16 00:02:36,086 - INFO -   - Rate limit: 20000 req/hour
+2026-03-16 00:02:36,086 - INFO - 
+============================================================
+2026-03-16 00:02:36,086 - INFO - EXAMPLE 1: Single Subreddit
+2026-03-16 00:02:36,086 - INFO - ============================================================
+2026-03-16 00:02:36,086 - INFO - 🎯 Scraping r/python (hot) - Target: 100 posts
+2026-03-16 00:02:43,080 - INFO - 
+⚠️  Interrupted by user
